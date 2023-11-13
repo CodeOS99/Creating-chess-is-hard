@@ -1,0 +1,417 @@
+[gd_scene load_steps=16 format=3 uid="uid://cjeiob3a2tdul"]
+
+[ext_resource type="Texture2D" uid="uid://cr232nxfgcwpo" path="res://assets/board.png" id="1_1l3cg"]
+[ext_resource type="Script" path="res://scripts/Board.gd" id="2_dve84"]
+[ext_resource type="PackedScene" uid="uid://bp8cmng51n80q" path="res://scenes/wr.tscn" id="2_sp83v"]
+[ext_resource type="PackedScene" uid="uid://b6tkejmidwmij" path="res://scenes/wq.tscn" id="3_ua1ig"]
+[ext_resource type="PackedScene" uid="uid://bi6r1ofxrmogl" path="res://scenes/wk.tscn" id="4_078c1"]
+[ext_resource type="PackedScene" uid="uid://dp8q6tnab8d6c" path="res://scenes/wn.tscn" id="5_1u4cp"]
+[ext_resource type="PackedScene" uid="uid://bp3260l5lg5n4" path="res://scenes/wb.tscn" id="6_k2p6n"]
+[ext_resource type="PackedScene" uid="uid://dysjyby3lft66" path="res://scenes/wp.tscn" id="7_ulx1b"]
+[ext_resource type="PackedScene" uid="uid://bbqpvx8s80m52" path="res://scenes/br.tscn" id="8_scpki"]
+[ext_resource type="PackedScene" uid="uid://d3hxp1kn8gjpp" path="res://scenes/bb.tscn" id="9_viojx"]
+[ext_resource type="PackedScene" uid="uid://krfiuhu5cxn2" path="res://scenes/bn.tscn" id="10_3uoe5"]
+[ext_resource type="PackedScene" uid="uid://dmtho0nqyeuqe" path="res://scenes/bq.tscn" id="11_ka87y"]
+[ext_resource type="PackedScene" uid="uid://bdkicdc8evj73" path="res://scenes/bk.tscn" id="12_jdpm0"]
+[ext_resource type="PackedScene" uid="uid://cqg3o6cbgcjqc" path="res://scenes/bp.tscn" id="13_p2jjq"]
+[ext_resource type="PackedScene" uid="uid://xjacan8rfuma" path="res://scenes/dropper.tscn" id="14_3lgjx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Board" type="Sprite2D" parent="."]
+position = Vector2(573, 321)
+scale = Vector2(2.805, 2.805)
+texture = ExtResource("1_1l3cg")
+script = ExtResource("2_dve84")
+
+[node name="Camera2D" type="Camera2D" parent="Board"]
+zoom = Vector2(1.24, 1.24)
+
+[node name="whitePeices" type="Node2D" parent="."]
+
+[node name="wr" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("2_sp83v")]
+position = Vector2(356, 538)
+index = 56
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wr2" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("2_sp83v")]
+position = Vector2(791, 538)
+index = 63
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wq" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("3_ua1ig")]
+position = Vector2(541, 538)
+index = 59
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wk" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("4_078c1")]
+position = Vector2(603, 538)
+index = 60
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wn" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("5_1u4cp")]
+position = Vector2(416, 538)
+index = 57
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wn2" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("5_1u4cp")]
+position = Vector2(727, 538)
+index = 62
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wb" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("6_k2p6n")]
+position = Vector2(667, 538)
+index = 61
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wb2" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("6_k2p6n")]
+position = Vector2(479, 538)
+index = 58
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wp" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("7_ulx1b")]
+position = Vector2(358, 473)
+index = 48
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wp2" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("7_ulx1b")]
+position = Vector2(418, 473)
+index = 49
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wp3" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("7_ulx1b")]
+position = Vector2(480, 473)
+index = 50
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wp4" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("7_ulx1b")]
+position = Vector2(542, 473)
+index = 51
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wp5" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("7_ulx1b")]
+position = Vector2(604, 473)
+index = 52
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wp6" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("7_ulx1b")]
+position = Vector2(666, 473)
+index = 53
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wp7" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("7_ulx1b")]
+position = Vector2(728, 473)
+index = 54
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="wp8" parent="whitePeices" node_paths=PackedStringArray("monkr") instance=ExtResource("7_ulx1b")]
+position = Vector2(790, 473)
+index = 55
+color = 1
+monkr = NodePath("../../Board")
+
+[node name="blackPeices" type="Node2D" parent="."]
+
+[node name="br" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("8_scpki")]
+position = Vector2(356, 102)
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="br2" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("8_scpki")]
+position = Vector2(791, 102)
+index = 7
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bb" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("9_viojx")]
+position = Vector2(479, 102)
+index = 15
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bb2" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("9_viojx")]
+position = Vector2(667, 102)
+index = 5
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bn" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("10_3uoe5")]
+position = Vector2(416, 102)
+index = 1
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bn2" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("10_3uoe5")]
+position = Vector2(725, 102)
+index = 6
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bq" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("11_ka87y")]
+position = Vector2(541, 102)
+index = 3
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bk" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("12_jdpm0")]
+position = Vector2(603, 102)
+index = 4
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bp" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("13_p2jjq")]
+position = Vector2(356, 163)
+index = 8
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bp2" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("13_p2jjq")]
+position = Vector2(417, 163)
+index = 9
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bp3" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("13_p2jjq")]
+position = Vector2(481, 163)
+index = 10
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bp4" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("13_p2jjq")]
+position = Vector2(543, 163)
+index = 11
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bp5" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("13_p2jjq")]
+position = Vector2(604, 163)
+index = 12
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bp6" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("13_p2jjq")]
+position = Vector2(666, 163)
+index = 13
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bp7" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("13_p2jjq")]
+position = Vector2(729, 163)
+index = 14
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="bp8" parent="blackPeices" node_paths=PackedStringArray("monkr") instance=ExtResource("13_p2jjq")]
+position = Vector2(790, 163)
+index = 15
+color = 0
+monkr = NodePath("../../Board")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="dropper" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(356, 102)
+
+[node name="dropper2" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(418, 103)
+
+[node name="dropper3" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(480, 106)
+
+[node name="dropper4" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(542, 102)
+
+[node name="dropper5" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(603, 102)
+
+[node name="dropper6" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(667, 102)
+
+[node name="dropper7" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(725, 102)
+
+[node name="dropper8" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(791, 102)
+
+[node name="dropper9" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(356, 163)
+
+[node name="dropper10" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(418, 164)
+
+[node name="dropper11" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(480, 167)
+
+[node name="dropper12" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(542, 163)
+
+[node name="dropper13" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(603, 163)
+
+[node name="dropper14" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(667, 163)
+
+[node name="dropper15" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(725, 163)
+
+[node name="dropper16" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(791, 163)
+
+[node name="dropper17" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(356, 229)
+
+[node name="dropper18" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(418, 230)
+
+[node name="dropper19" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(480, 233)
+
+[node name="dropper20" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(542, 229)
+
+[node name="dropper21" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(603, 229)
+
+[node name="dropper22" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(667, 229)
+
+[node name="dropper23" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(725, 229)
+
+[node name="dropper24" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(791, 229)
+
+[node name="dropper25" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(356, 290)
+
+[node name="dropper26" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(418, 291)
+
+[node name="dropper27" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(480, 294)
+
+[node name="dropper28" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(542, 290)
+
+[node name="dropper29" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(603, 290)
+
+[node name="dropper30" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(667, 290)
+
+[node name="dropper31" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(725, 290)
+
+[node name="dropper32" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(791, 290)
+
+[node name="dropper33" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(355, 350)
+
+[node name="dropper34" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(417, 351)
+
+[node name="dropper35" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(479, 354)
+
+[node name="dropper36" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(541, 350)
+
+[node name="dropper37" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(602, 350)
+
+[node name="dropper38" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(666, 350)
+
+[node name="dropper39" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(724, 350)
+
+[node name="dropper40" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(790, 350)
+
+[node name="dropper41" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(355, 411)
+
+[node name="dropper42" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(417, 412)
+
+[node name="dropper43" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(479, 415)
+
+[node name="dropper44" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(541, 411)
+
+[node name="dropper45" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(602, 411)
+
+[node name="dropper46" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(666, 411)
+
+[node name="dropper47" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(724, 411)
+
+[node name="dropper48" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(790, 411)
+
+[node name="dropper49" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(355, 477)
+
+[node name="dropper50" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(417, 478)
+
+[node name="dropper51" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(479, 481)
+
+[node name="dropper52" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(541, 477)
+
+[node name="dropper53" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(602, 477)
+
+[node name="dropper54" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(666, 477)
+
+[node name="dropper55" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(724, 477)
+
+[node name="dropper56" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(790, 477)
+
+[node name="dropper57" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(355, 538)
+
+[node name="dropper58" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(417, 539)
+
+[node name="dropper59" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(479, 542)
+
+[node name="dropper60" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(541, 538)
+
+[node name="dropper61" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(602, 538)
+
+[node name="dropper62" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(666, 538)
+
+[node name="dropper63" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(724, 538)
+
+[node name="dropper64" parent="Node2D" instance=ExtResource("14_3lgjx")]
+position = Vector2(790, 538)

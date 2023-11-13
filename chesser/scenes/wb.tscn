@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp3260l5lg5n4"]
+
+[ext_resource type="Texture2D" uid="uid://bb4xkf0bkrexn" path="res://assets/white_bishop.png" id="1_lfpx5"]
+[ext_resource type="Script" path="res://scripts/dragAndDrop.gd" id="1_n1pij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_daelj"]
+size = Vector2(38, 40)
+
+[node name="wb" type="Node2D"]
+script = ExtResource("1_n1pij")
+
+[node name="WhiteBishop" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_lfpx5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_daelj")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

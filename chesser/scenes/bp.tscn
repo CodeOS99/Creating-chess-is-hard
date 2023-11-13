@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqg3o6cbgcjqc"]
+
+[ext_resource type="Script" path="res://scripts/dragAndDrop.gd" id="1_ab0ax"]
+[ext_resource type="Texture2D" uid="uid://ce3g0dyt12m2f" path="res://assets/black_pawn.png" id="1_xft7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvh3v"]
+size = Vector2(26, 32)
+
+[node name="wp" type="Node2D"]
+script = ExtResource("1_ab0ax")
+
+[node name="WhitePawn" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_xft7e")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_lvh3v")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered" flags=18]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited" flags=18]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event" flags=18]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://xjacan8rfuma"]
+
+[ext_resource type="Script" path="res://scripts/dropper.gd" id="1_fn7mc"]
+
+[node name="dropper" type="Marker2D" groups=["zone"]]
+script = ExtResource("1_fn7mc")

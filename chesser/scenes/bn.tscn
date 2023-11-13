@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://krfiuhu5cxn2"]
+
+[ext_resource type="Texture2D" uid="uid://c3os402pmcixb" path="res://assets/black_knight.png" id="1_2aaw3"]
+[ext_resource type="Script" path="res://scripts/dragAndDrop.gd" id="1_j5sim"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xh3v"]
+size = Vector2(38, 40)
+
+[node name="bn" type="Node2D"]
+script = ExtResource("1_j5sim")
+
+[node name="BlackKnight" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_2aaw3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_0xh3v")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
